@@ -17,16 +17,16 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 TARGET_OTA_ASSERT_DEVICE := hennessy
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
+    LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 PRODUCT_PACKAGES += \
-libxlog
+    libxlog
 
 PRODUCT_COPY_FILES += \
-   $(LOCAL_KERNEL):prebuilt/kernel
+    $(LOCAL_KERNEL):prebuilt/kernel
 
 # Init
 PRODUCT_PACKAGES += \
@@ -34,11 +34,11 @@ PRODUCT_PACKAGES += \
 
 # Gralloc
 PRODUCT_PACKAGES += \
-   libgralloc_extra
+    libgralloc_extra
 
 # Immvibe
 PRODUCT_PACKAGES += \
-	immvibe
+    immvibe
 
 # Hack to fix asec on emulated sdcard
 PRODUCT_PACKAGES += \
@@ -69,9 +69,9 @@ PRODUCT_COPY_FILES += \
      
 # Keyboard layout
 PRODUCT_COPY_FILES += \
-     device/xiaomi/mt6795-common/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-     device/xiaomi/mt6795-common/configs/ACCDET.kl:system/usr/keylayout/ACCDET.kl\
-     device/xiaomi/mt6795-common/configs/AVRCP.kl:system/usr/keylayout/AVRCP.kl      
+    device/xiaomi/mt6795-common/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
+    device/xiaomi/mt6795-common/configs/ACCDET.kl:system/usr/keylayout/ACCDET.kl\
+    device/xiaomi/mt6795-common/configs/AVRCP.kl:system/usr/keylayout/AVRCP.kl      
 
 #Light    
 #PRODUCT_PACKAGES += \
@@ -82,7 +82,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/enableswap.sh:root/enableswap.sh \
     $(LOCAL_PATH)/rootdir/factory_init.project.rc:root/factory_init.project.rc \
     $(LOCAL_PATH)/rootdir/factory_init.rc:root/factory_init.rc \
-	$(LOCAL_PATH)/rootdir/file_context:root/file_context \
+    $(LOCAL_PATH)/rootdir/file_context:root/file_context \
     $(LOCAL_PATH)/rootdir/fstab.charger:root/fstab.charger\
     $(LOCAL_PATH)/rootdir/fstab.mt6795:root/fstab.mt6795 \
     $(LOCAL_PATH)/rootdir/init.aee.rc:root/init.aee.rc \
@@ -108,11 +108,11 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-     device/xiaomi/mt6795-common/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc \
-     device/xiaomi/mt6795-common/configs/thermal.conf:system/etc/.tp/thermal.conf \
-     device/xiaomi/mt6795-common/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
-     device/xiaomi/mt6795-common/configs/.thermal_policy_00:system/etc/.tp/.thermal_policy_00 \
-     device/xiaomi/mt6795-common/configs/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 
+    device/xiaomi/mt6795-common/configs/.ht120.mtc:system/etc/.tp/.ht120.mtc \
+    device/xiaomi/mt6795-common/configs/thermal.conf:system/etc/.tp/thermal.conf \
+    device/xiaomi/mt6795-common/configs/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+    device/xiaomi/mt6795-common/configs/.thermal_policy_00:system/etc/.tp/.thermal_policy_00 \
+    device/xiaomi/mt6795-common/configs/.thermal_policy_01:system/etc/.tp/.thermal_policy_01 
     
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -154,15 +154,15 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
 PRODUCT_COPY_FILES += \
-	device/xiaomi/mt6795-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
-	device/xiaomi/mt6795-common/configs/media_codecs.xml:system/etc/permissions/media_codecs.xml \
-	device/xiaomi/mt6795-common/configs/media_profiles.xml:system/etc/media_profiles.xml
+    device/xiaomi/mt6795-common/configs/media_codecs.xml:system/etc/media_codecs.xml \
+    device/xiaomi/mt6795-common/configs/media_codecs.xml:system/etc/permissions/media_codecs.xml \
+    device/xiaomi/mt6795-common/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Charger
 PRODUCT_PACKAGES += \
-      charger_res_images
+    charger_res_images
 
 # Wifi
  PRODUCT_PACKAGES += \
@@ -195,19 +195,18 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-     device/xiaomi/mt6795-common/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
+    device/xiaomi/mt6795-common/configs/agps_profiles_conf2.xml:system/etc/agps_profiles_conf2.xml \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES := \
-     ro.adb.secure=0 \
-     ro.secure=1 \
-     ro.allow.mock.location=1 \
-     ro.debuggable=1 \
-     ro.zygote=zygote64_32 \
-     camera.disable_zsl_mode=1 \
-     ro.mount.fs=EXT4 \
-     persist.service.acm.enable=0 \
-     persist.sys.usb.config=mtp,mass_storage \
-     persist.sys.timezone=Asia/Shanghai
+    ro.adb.secure=0 \
+    ro.secure=1 \
+    ro.allow.mock.location=1 \
+    ro.debuggable=1 \
+    ro.zygote=zygote64_32 \
+    camera.disable_zsl_mode=1 \
+    ro.mount.fs=EXT4 \
+    persist.service.acm.enable=0 \
+    persist.sys.usb.config=mtp,mass_storage
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \

@@ -11,9 +11,6 @@ PRODUCT_RELEASE_NAME := xiaomi hennessy
 
 EXTENDED_FONT_FOOTPRINT := true
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.timezone=Asia/Shanghai
-
 PRODUCT_DEVICE := hennessy
 PRODUCT_NAME := full_hennessy
 PRODUCT_BRAND := xiaomi
